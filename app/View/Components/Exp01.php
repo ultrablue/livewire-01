@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use Carbon\Carbon;
 use Illuminate\View\Component;
 
 class Exp01 extends Component
@@ -13,6 +14,8 @@ class Exp01 extends Component
 
     public $foo;
 
+    public $now;
+
     /**
      * Create a new component instance.
      *
@@ -20,6 +23,7 @@ class Exp01 extends Component
      */
     public function __construct($foo = 'foo wasn\'t set', $message)
     {
+        // These are settable outside the class.
         $this->foo = $foo;
         $this->message = $message;
     }
@@ -31,6 +35,12 @@ class Exp01 extends Component
      */
     public function render()
     {
+        if (strtoupper($this->foo) === 'BAR') {
+            $this->foo = 'Foo was changed to baz in '.__FILE__;
+        }
+
+        $this->now = new Carbon();
+
         return view('components.exp01');
     }
 }

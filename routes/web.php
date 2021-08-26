@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Compontent01Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +24,5 @@ Route::view('/calendar-01', 'calendar.calendar-01');
 Route::view('/calendar-02', 'calendar.calendar-02', ['title' => '2️⃣ Calendar Test 02: Modularizing?']);
 
 Route::view('/components-01', 'components-tests.components-01');
+
+Route::get('/components-02', [Compontent01Controller::class, 'show']);
