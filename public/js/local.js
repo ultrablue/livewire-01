@@ -1,6 +1,6 @@
 
 window.addEventListener('load', function() {
-    saySomething('It worked!');
+    // saySomething('It worked!');
 
     document.querySelector('#grid-state').addEventListener('change', stateChanged);
 
@@ -14,7 +14,7 @@ function saySomething(whatToSay) {
 function stateChanged() {
     // console.log("State changed!");
     // console.log(this.value);
-    window.location = this.value;
+    window.location = "/components-02/" + this.value;
 }
 
 
