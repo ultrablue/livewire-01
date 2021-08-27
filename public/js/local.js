@@ -3,7 +3,7 @@ window.addEventListener('load', function() {
     // saySomething('It worked!');
 
     document.querySelector('#grid-state').addEventListener('change', stateChanged);
-
+    document.querySelector('#grid-state').focus();
 })
 
 function saySomething(whatToSay) {
