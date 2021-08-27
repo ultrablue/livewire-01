@@ -25,4 +25,4 @@ Route::view('/calendar-02', 'calendar.calendar-02', ['title' => '2️⃣ Calenda
 
 Route::view('/components-01', 'components-tests.components-01');
 
-Route::get('/components-02', [Compontent01Controller::class, 'show']);
+Route::get('/components-02/{state?}', [Compontent01Controller::class, 'show']);

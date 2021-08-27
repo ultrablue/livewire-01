@@ -8,7 +8,7 @@
     <select class="block appearance-none w-1/12 bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
         id="grid-state">
         @foreach ($states as $state)
-            <option value="{{ $state->code }}">{{ $state->name }}</option>
+            <option value="{{ $state->code }}" @if ($selected === $state->code) selected="selected" @endif>{{ $state->name }}</option>
         @endforeach
     </select>
     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
