@@ -15,7 +15,7 @@
             <li><span class="line-through">Rename things to make them more comprehensible.</span></li>
             <li>Make some tests!!</li>
             <li>Add an autocomplete field. Fake it with a list.</li>
-            <li>Make sure that the cities and states models don't do dates.</li>
+            <li><span class="line-through">Make sure that the cities and states models don't do dates.</span></li>
         </ul>
     </div>
 
