@@ -2,8 +2,8 @@
 window.addEventListener('load', function() {
     // saySomething('It worked!');
 
-    document.querySelector('#grid-state').addEventListener('change', stateChanged);
-    document.querySelector('#grid-state').focus();
+    document.querySelector('#state-chooser').addEventListener('change', stateChanged);
+    document.querySelector('#state-chooser').focus();
 })
 
 function saySomething(whatToSay) {

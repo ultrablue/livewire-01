@@ -20,10 +20,10 @@
     </div>
 
 
-    <x-LocationChooser :chooserData="$states" :selected="$selected" chooserId="grid-state"></x-LocationChooser>
+    <x-LocationChooser :chooserData="$states" :selected="$selected" chooserId="state-chooser"></x-LocationChooser>
 
     @if ($cities)
-        <x-LocationChooser :chooserData="$cities" :selected="$selected" chooserId="grid-city"></x-LocationChooser>
+        <x-LocationChooser :chooserData="$cities" :selected="$selected" chooserId="city-chooser"></x-LocationChooser>
     @endif
 
 
