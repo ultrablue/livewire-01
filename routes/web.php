@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CitiesAndStatesLivewire01;
 use App\Http\Controllers\CitiesAndStatesPageReloadController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,3 +27,5 @@ Route::view('/calendar-02', 'calendar.calendar-02', ['title' => '2️⃣ Calenda
 Route::view('/components-01', 'components-tests.components-01');
 
 Route::get('/cities-and-states-01/{state?}', [CitiesAndStatesPageReloadController::class, 'show']);
+
+Route::get('cities-and-states-livewire-01', [CitiesAndStatesLivewire01::class, 'show']);
