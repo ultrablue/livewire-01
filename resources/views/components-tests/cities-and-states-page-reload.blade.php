@@ -1,6 +1,5 @@
-{{-- TODO I need a title, please! --}}
 @extends('layouts.component-layout-01')
-@section('pageTitle')Component Test 2 @endsection
+@section('pageTitle')Cities and States 01 - Static Page Reload @endsection
 
 
 
@@ -12,8 +11,8 @@
         <h1 class="text-2xl font-bold">Tasks</h1>
         <ul class="list-disc list-inside ml-6">
             <li><span class="line-through">Make the form fields Components.</span></li>
-            <li>Change title</li>
-            <li>Rename things to make them more comprehensible.</li>
+            <li><span class="line-through">Change title</span></li>
+            <li><span class="line-through">Rename things to make them more comprehensible.</span></li>
             <li>Make some tests!!</li>
             <li>Add an autocomplete field. Fake it with a list.</li>
             <li>Make sure that the cities and states models don't do dates.</li>

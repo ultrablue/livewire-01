@@ -11,10 +11,11 @@ function saySomething(whatToSay) {
 }
 
 
+/**
+ * This is the function that runs when the State is changed.
+ */
 function stateChanged() {
-    // console.log("State changed!");
-    // console.log(this.value);
-    window.location = "/components-02/" + this.value;
+    window.location = "/cities-and-states-01/" + this.value;
 }
 
 
