@@ -12,4 +12,5 @@ class City extends Model
      * @var bool
      */
     public $timestamps = false;
+    public $fillable = ['name', 'state'];
 }
