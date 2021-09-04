@@ -8,19 +8,43 @@ use Livewire\Component;
 
 class States extends Component
 {
+    // These values are automatically passed to the blade component.
     public $state;
+    public $states;
     public $cities = [];
     public $city;
+    public $thing;
+
+    // protected $rules;
+    protected $rules = ['states' => 'required'];
+
+    public function mount()
+    {
+        $this->refreshData();
+    }
+
+    private function refreshData()
+    {
+        // dd($this->state);
+        $this->states = State::all();
+        // dd($this->states);
+        if (!empty($this->state)) {
+            $this->cities = City::where('state', '=', $this->state)->get();
+        }
+        $this->thing = 'Thing thing!';
+    }
 
     public function render()
     {
-        if (!empty($this->state)) {
-            $this->cities = City::where('state', '=', $this->state)->get();
-            // dump($this->cities);
-        }
+        $this->refreshData();
 
-        $states = State::orderBy('name')->get();
+        // dd($this->cities);
 
-        return view('livewire.states', ['states' => $states]);
+        return view('livewire.states');
+    }
+
+    public function updatedSelectedState($state)
+    {
+        dd($state);
     }
 }
