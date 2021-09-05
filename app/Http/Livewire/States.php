@@ -25,26 +25,16 @@ class States extends Component
 
     private function refreshData()
     {
-        // dd($this->state);
         $this->states = State::all();
-        // dd($this->states);
         if (!empty($this->state)) {
-            $this->cities = City::where('state', '=', $this->state)->get();
+            $this->cities = City::where('state_code', '=', $this->state)->orderBy('city')->orderBy('county')->get();
         }
-        $this->thing = 'Thing thing!';
     }
 
     public function render()
     {
         $this->refreshData();
 
-        // dd($this->cities);
-
         return view('livewire.states');
-    }
-
-    public function updatedSelectedState($state)
-    {
-        dd($state);
     }
 }

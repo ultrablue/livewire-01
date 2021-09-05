@@ -16,14 +16,19 @@ class State extends Model
     /**
      * This is the primary key for this table.
      */
-    // protected $primaryKey = 'code';
+    protected $primaryKey = 'state_code';
 
     /**
      * Set the default sort. This is required if hydrating the model.
      */
-    protected $sort_attribute = 'name';
+    // protected $sortAttribute = 'name';
 
     public $incrementing = false;
 
     protected $keyType = 'string';
+
+    public function cities()
+    {
+        return $this->hasMany(City::class, 'state_code');
+    }
 }
