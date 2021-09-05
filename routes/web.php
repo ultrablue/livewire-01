@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthorsAndBooksLivewire01;
 use App\Http\Controllers\CitiesAndStatesLivewire01;
 use App\Http\Controllers\CitiesAndStatesPageReloadController;
 use Illuminate\Support\Facades\Route;
@@ -29,3 +30,4 @@ Route::view('/components-01', 'components-tests.components-01');
 Route::get('/cities-and-states-01/{state?}', [CitiesAndStatesPageReloadController::class, 'show']);
 
 Route::get('cities-and-states-livewire-01', [CitiesAndStatesLivewire01::class, 'show']);
+Route::get('authors-and-books-livewire-01', [AuthorsAndBooksLivewire01::class, 'show']);
