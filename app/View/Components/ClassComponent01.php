@@ -5,25 +5,24 @@ namespace App\View\Components;
 use Carbon\Carbon;
 use Illuminate\View\Component;
 
-class Exp01 extends Component
+class ClassComponent01 extends Component
 {
     /**
-     * The Message to pass to the Component.
+     * These are automatically available outside the class (in the view files, for example).
      */
     public $message;
-
     public $foo;
-
     public $now;
 
     /**
      * Create a new component instance.
      *
+     * Note that if $foo wasn't set, it has a default value. That's standard php.
+     *
      * @return void
      */
     public function __construct($foo = 'foo wasn\'t set', $message)
     {
-        // These are settable outside the class.
         $this->foo = $foo;
         $this->message = $message;
     }
@@ -41,6 +40,6 @@ class Exp01 extends Component
 
         $this->now = new Carbon();
 
-        return view('components.exp01');
+        return view('components.ClassComponent01');
     }
 }
