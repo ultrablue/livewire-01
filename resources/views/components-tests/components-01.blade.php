@@ -1,4 +1,5 @@
 @extends('layouts.component-layout-01')
+@section('pageTitle')Basic Components @endsection
 
 <div class="mt-10 ml-5 p-5 border border-black w-3/4 center">
     <ul>
