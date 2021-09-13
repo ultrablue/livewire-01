@@ -8,6 +8,6 @@ class AuthorsAndBooksLivewire01 extends Controller
 {
     public function show(Request $request)
     {
-        return view('components-tests.dropdown');
+        return view('components-tests.authors-and-books');
     }
 }
