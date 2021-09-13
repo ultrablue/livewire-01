@@ -14,6 +14,7 @@
         <li>Anonymous Compontent: resources/views/components-tests/components-01.blade.php</li>
         <li>Component Class: app/View/Components/ClassComponent01.php</li>
         <li>Compontent Class Blade: resources/views/components/ClassComponent01.blade.php</li>
+
     </ul>
 </div>
 
