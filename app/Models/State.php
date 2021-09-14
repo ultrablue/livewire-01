@@ -31,4 +31,18 @@ class State extends Model
     {
         return $this->hasMany(City::class, 'state_code');
     }
+
+    // Since the cities and states tables aren't consistant, and we need an
+    // 'id' attribute, we'll just make that happen... the Laravel way!
+    // Using an Accessor. See https://laravel.com/docs/eloquent-mutators
+    public function getIdAttribute()
+    {
+        return $this->attributes['state_code'];
+    }
+
+    // See note for the id Accessor, above, for more.
+    public function getNameAttribute()
+    {
+        return $this->attributes['state'];
+    }
 }

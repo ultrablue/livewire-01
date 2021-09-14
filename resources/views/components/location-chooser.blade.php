@@ -2,7 +2,7 @@
     <select class="block appearance-none w-auto bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
         id="{{ $chooserId }}">
         @foreach ($chooserData as $data)
-            <option value="{{ $data->code }}" @if ($selected === $data->code) selected="selected" @endif>{{ $data->name }}</option>
+            <option value="{{ $data->id }}" @if ($selected === $data->id) selected="selected" @endif>{{ $data->name }}</option>
         @endforeach
     </select>
     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">

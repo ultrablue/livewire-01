@@ -21,7 +21,9 @@ class CitiesAndStatesPageReloadController extends Controller
         $cities = null;
 
         if ($request->state) {
-            $cities = City::where('state', '=', $request->state)->get();
+            // dd($request->state);
+            $cities = City::where('state_code', '=', $request->state)->orderBy('city')->orderBy('zip')->get();
+            // dd($cities);
         }
 
         return view('components-tests.cities-and-states-page-reload', ['states' => State::all(), 'selected' => $request->state, 'cities' => $cities]);
