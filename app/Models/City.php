@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
+    use \Awobaz\Compoships\Compoships;
     /**
      * Indicates if the model should be timestamped.
      *
@@ -13,6 +14,7 @@ class City extends Model
      */
     public $timestamps = false;
     public $fillable = ['name', 'state'];
+    public $primaryKeys = ['city', 'state_code'];
 
     public function state()
     {

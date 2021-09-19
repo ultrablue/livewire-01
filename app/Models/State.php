@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class State extends Model
 {
+    use \Awobaz\Compoships\Compoships;
+
     /**
      * Indicates if the model should be timestamped.
      *
@@ -16,7 +18,7 @@ class State extends Model
     /**
      * This is the primary key for this table.
      */
-    protected $primaryKey = 'state_code';
+    protected $primaryKey = ['state_code'];
 
     /**
      * Set the default sort. This is required if hydrating the model.
